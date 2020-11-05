@@ -152,11 +152,11 @@
 
 				<section class="form">
 					<div>
-						<input type="text" name="name1" required placeholder="Boy's Name"/>
+						<input type="text" name="name1" maxlength="10" placeholder="Boy's Name"/>
 					</div>
 					<p class="plus">+</p>
 					<div>
-						<input type="text" name="name2" required placeholder="Girl's name"/>
+						<input type="text" name="name" maxlength="10" placeholder="Girl's name"/>
 					</div>
 					<button onclick="check()">CHECK</button>
 				</section>
@@ -191,7 +191,7 @@
 				const two = girl.value.toLowerCase().split('').filter(val => !boy.value.toLowerCase().split('').includes(val))
 				const fresh = [...one, ...two]
 				if (fresh.length === 0) out = 'Not compartible'
-				else {num = fresh.length % 6 == 0 ? 1 : fresh.length % 6 ; out = flames[num - 1]}
+				else {num = fresh.length % 6 == 0 ? 6 : fresh.length % 6 ; out = flames[num - 1]}
 
 				section1.classList.toggle('move')
 				section2.classList.toggle('mount')
