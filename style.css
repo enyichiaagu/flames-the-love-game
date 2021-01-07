@@ -52,8 +52,8 @@ main {
 }
 
 .light {
-    background-color: var(--text);
-    box-shadow: rgba(214, 126, 141, 0.51);
+    background-color: rgba(252, 203, 211, 0.497);
+    box-shadow: 2px 2px 2px var(--shadow-color);
 }
 
 .dark {
