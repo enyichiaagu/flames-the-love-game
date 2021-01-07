@@ -53,7 +53,7 @@ main {
 
 .light {
     background-color: var(--text);
-    box-shadow: 2px 2px 2px var(--shadow-color);
+    box-shadow: rgba(214, 126, 141, 0.51);
 }
 
 .dark {
