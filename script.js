@@ -1,7 +1,27 @@
+const $ = (selector) => document.querySelector(selector)
+const all$ = (selector) => document.querySelectorAll(selector) 
+
 const flames = ['friends', 'lovers', 'admirers', 'married', 'enemies', 'secret lovers'],
-    form = document.querySelector('.form'),
-	outcome = document.querySelector('section.result'),
-    checkButton = document.getElementsByTagName('button')[1]
+    form = $('.form'),
+	outcome = $('section.result'),
+    checkButton = $('.reverse'),
+    main = $('main'),
+    dark = $('dark'),
+    light = $('light')
+
+const darken = () => {
+    main.setAttribute('data-theme', 'dark')
+    localStorage.setItem('theme', 'dark')
+}
+
+const lighten = () => {
+    main.setAttribute('data-theme', 'light')
+    localStorage.setItem('theme', 'light')
+}
+
+if (localStorage.getItem('theme') == 'dark') darken()
+else if (localStorage.getItem('theme') == 'light') lighten()
+else lighten()
 
 let out, num
     
@@ -33,7 +53,7 @@ function solve(boyName, girlName) {
 }
 
 function check () {
-    [male, female] = document.getElementsByTagName('input')
+    [male, female] = all$('input')
     if (male.value != '' && female.value != '') {
         let answer = solve(male.value.toLowerCase(), female.value.toLowerCase())
         if (answer === 0) out = 'Not Compartible'
@@ -41,9 +61,9 @@ function check () {
         form.classList.toggle('move')
         outcome.classList.toggle('mount')
 
-        document.querySelector('#girl').textContent = male.value
-        document.querySelector('#boy').textContent = female.value
-        document.querySelector('h2').textContent = out
+        $('#girl').textContent = male.value
+        $('#boy').textContent = female.value
+        $('h2').textContent = out
         
         checkButton.addEventListener('click', reverse)
 
