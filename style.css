@@ -31,9 +31,10 @@
 
 main {
     background-color: var(--primary);
+    position: absolute;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     overflow-y: auto;
     transition: background-color 300ms ease-in-out 0s;
 }
@@ -52,7 +53,7 @@ main {
 }
 
 .light {
-    background-color: rgba(252, 203, 211, 0.497);
+    background-color: var(--text);
     box-shadow: 2px 2px 2px var(--shadow-color);
 }
 
@@ -60,6 +61,13 @@ main {
     background-color: rgb(61, 61, 87);
     box-shadow: 2px 2px 2px var(--shadow-color);
 }
+
+/* body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: auto;
+} */
 
 .container {
     display: flex;
