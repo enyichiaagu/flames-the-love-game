@@ -39,6 +39,10 @@ main {
     overflow-y: auto;
 }
 
+main {
+    background-color: var(--primary);
+}
+
 .mode-box {
     display: flex;
     padding-top: 10px;
