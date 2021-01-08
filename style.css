@@ -29,14 +29,17 @@
     outline: none;
 }
 
-main {
-    background-color: var(--primary);
+body {
     position: absolute;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     transition: background-color 300ms ease-in-out 0s;
+}
+
+main {
+    background-color: var(--primary);
 }
 
 .mode-box {
