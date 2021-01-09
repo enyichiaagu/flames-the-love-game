@@ -13,7 +13,7 @@
     --text: pink;
     --input: var(--text);
     --box: #0b1728;
-    --other: #868686;
+    --other: gray;
     --link: var(--text);
     --shadow-color: #0b1728;
 }
